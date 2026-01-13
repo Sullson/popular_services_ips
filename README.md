@@ -7,6 +7,7 @@ Plain text IP lists for firewall rules. Updated weekly via GitHub Actions.
 | Service | File | Raw URL |
 |---------|------|---------|
 | Azure Bot Service | `azure-bot-service.txt` | [Raw](../../raw/main/azure-bot-service.txt) |
+| Azure Connectors | `azure-connectors.txt` | [Raw](../../raw/main/azure-connectors.txt) |
 
 ## Format
 
