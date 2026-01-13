@@ -4,10 +4,12 @@ Plain text IP lists for firewall rules. Updated weekly via GitHub Actions.
 
 ## Available Lists
 
-| Service | File | Raw URL |
-|---------|------|---------|
-| Azure Bot Service | `azure-bot-service.txt` | [Raw](../../raw/main/azure-bot-service.txt) |
-| Azure Connectors | `azure-connectors.txt` | [Raw](../../raw/main/azure-connectors.txt) |
+| Service | File | Note |
+|---------|------|------|
+| Azure Bot Service | [`azure-bot-service.txt`](../../raw/main/azure-bot-service.txt) | ⊂ Cloud |
+| Azure Connectors | [`azure-connectors.txt`](../../raw/main/azure-connectors.txt) | ⊂ Cloud |
+| Azure Cloud (IPv4) | [`azure-cloud-v4.txt`](../../raw/main/azure-cloud-v4.txt) | superset |
+| Azure Cloud (IPv6) | [`azure-cloud-v6.txt`](../../raw/main/azure-cloud-v6.txt) | superset |
 
 ## Format
 
@@ -22,7 +24,7 @@ One CIDR per line, Unix line endings. Compatible with pfSense URL Table Aliases.
 
 1. GitHub Action runs every Monday at 06:00 UTC
 2. Script downloads Microsoft's [Service Tags JSON](https://www.microsoft.com/en-us/download/details.aspx?id=56519)
-3. Extracts IPs for the target service tag
+3. Extracts and aggregates IPs (large lists collapsed to fit pfSense 3k limit)
 4. Commits changes if any
 
 ## pfSense Usage
